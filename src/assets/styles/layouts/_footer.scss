@@ -1,0 +1,56 @@
+footer {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    text-align: center;
+    position: static;
+    background-color: $back-color;
+    bottom: 0px;
+    width: 100%;
+    
+  }
+
+  .footer-social ul li{
+    display: inline-block;
+    padding: 15px 30px;
+    
+  }
+
+  .footlogo img {
+    width: 50px;
+    cursor: pointer;
+    
+  }
+  .footnavigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px 50px;
+    
+  }
+  @media only screen and (max-width: 600px) {
+    nav ul li {
+      display: flex;
+    
+      
+    }
+    .footnavigation {
+      display: inline-block;
+      float: none;
+      padding-left: 40%;
+    }
+    .footnavigation .footlogo{
+      
+      padding-right: 45%;
+    }
+    .footer-social ul li{
+    
+      padding: 0px 10px ;
+      padding-right: 60px;
+      padding-left: 10px;
+     
+
+    }
+    
+    
+  }

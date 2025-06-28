@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family-sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: $back-color;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.content-left h2{
+	font-size: 40px;
+	text-transform: capitalize;
+	font-family: 'Times New Roman', Times, serif;
+	
+  }
+  
+  
+  
+  .content-left a{
+  text-decoration: none;
+  font-size: 16px;
+  color: $learn-more;
+  text-transform: capitalize;
+  margin-top: 10px;
+  
+  }
+  h1 {
+	color: $nav-color;
+margin-left: 25%;
+	font-size: 6rem;
+	font-weight: bold;
+	letter-spacing: -0.1rem;
+	padding: 0 0 0.5rem 2rem;
+	border-bottom: 2px solid #fff;
+}
+p {
+	font-weight: normal;
+	font-size: 1.8rem;
+	letter-spacing: 0.025rem;
+	line-height: 1.4;
+	padding-left: 2rem;
+	flex: 1;
+}
+
+  /* PORTADA GRID POSTER
+
+*/
+
+html {
+	font-size: 60%; //enable relative sizing where 1rem = 10px
+	height: 100%;
+}
+
+
+#poster {
+	width: 80%;
+	height: 100%;
+	overflow: hidden;
+}
+@supports (display: grid) {
+  .content{
+    display: grid; 
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    color: $body-color;
+   
+  }
+
+  @mixin background-gradient {
+	background: linear-gradient(to bottom, $circle1 0%,$circle1 50%,$circle2 50%,$circle2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ec2cf', endColorstr='#ef3423',GradientType=0 );
+	}
+	
+	#poster {
+		background-color: $back-color;
+	  display: block;
+	  
+		
+		#top { 
+			display:flex;
+			margin: 0.5rem;
+		margin-left: 25%;
+			color: $body-color;
+			
+			p:first-child {
+				padding-left: 0;
+				flex: 1.5;
+			}
+		}
+		
+	
+		
+		#circles { 
+		
+		text-align: center;
+		align-items: center;
+			position: absolute;
+			width: 60rem;
+			height: 60rem;
+			margin-top: 1rem;
+		margin-left: 15%;
+		
+		
+	   
+		}
+		#c1, #c2, #c3, #c4 {
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			transition: all 1s ease-in-out;
+		}
+		#c1 {
+			width: 60rem;
+			height: 60rem;
+			border-radius: 30rem;
+			@include background-gradient;
+		}
+		#c2 {
+			width: 40rem;
+			height: 40rem;
+			border-radius: 20rem;
+			background-color: $back-color;
+		}
+		#c3 {
+			width: 30rem;
+			height: 30rem;
+			border-radius: 15rem;
+			@include background-gradient;
+			transform: translate(-50%, -50%) rotate(90deg);
+		}
+		#c4 {
+			width: 8rem;
+			height: 8rem;
+			border-radius: 4rem;
+			background-color: $back-color;
+		}
+		
+		#circles:hover {
+			#c1 {
+			transform: translate(-50%, -50%) rotate(180deg);
+		}
+		#c3 {
+			transform: translate(-50%, -50%) rotate(270deg);
+		}
+		}
+	}
+	
+
+
+
+}
+
+@supports  not (display: grid) {
+  .content{
+    display: flex; 
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1150px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    color: $body-color;
+   
+  }
+  .container{
+	background-image: url("/src/assets/images/eco.svg") ;
+	background-repeat: no-repeat;
+	background-position: 35%;
+	
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
